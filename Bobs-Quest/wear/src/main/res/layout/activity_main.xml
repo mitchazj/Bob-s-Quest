@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.wearable.view.WearableFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:id="@+id/container" tools:context=".MainActivity"
+    tools:deviceIds="wear">
+
+    <com.orangutandevelopment.bobsquest.BobView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bob_view" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/overlay_view"
+        android:background="#aa000000"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <com.orangutandevelopment.bobsquest.CoolFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/view"
+                android:layout_gravity="center_horizontal"
+                android:text="Game Over"
+                android:textColor="#ffffff"
+                android:textSize="32sp" />
+
+            <com.orangutandevelopment.bobsquest.CoolFontTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tx_score"
+                android:layout_gravity="center_horizontal"
+                android:text="Score: 2 | Top: 13"
+                android:textColor="#e6fafc"
+                android:textSize="22sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="7dp" />
+
+            <ImageButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_new"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_undo_white_24dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="#0B81FF"
+                android:padding="7dp" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <android.support.wearable.view.DismissOverlayView
+        android:id="@+id/dismiss_overlay"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"/>
+
+</android.support.wearable.view.WearableFrameLayout>
